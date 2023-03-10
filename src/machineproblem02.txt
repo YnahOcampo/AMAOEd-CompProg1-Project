@@ -1,0 +1,91 @@
+//Machine Problem 002
+//Seat Reservation
+
+
+#include <iostream>
+#include "_pause.h"
+
+
+using namespace std;
+
+int SeatDirectory[5][7]{
+	{1,2,3,4,5,6,7},
+	{8,9,10,11,12,13,14},
+	{15,16,17,18,19,20,21},
+	{22,23,24,25,26,27,28},
+	{29,30,31,32,33,34,35},
+};
+int row, col;
+
+class SeatReservation {
+public:
+	SeatReservation() {
+		for (row = 0; row < 5; row++) {
+			for (col = 0; col < 7; col++) {
+			    SeatDirectory[row][col];
+		}
+	}
+}
+void Reservation() {
+	int seatNum, Total = row * col, Flag = 0;
+	cout << "Please Enter Desired Seat Number: ";
+	cin >> seatNum;
+	do {
+		if (seatNum<0 || seatNum>Total);
+		cout << "You Have Successfully Reserved a Seat" 
+		     << endl;
+	}while (seatNum<0 || seatNum>Total);
+	for (row =0; row < 5; row++){
+		for (col = 0; col < 7; col++) {
+			if (SeatDirectory[row][col]== seatNum){
+				SeatDirectory[row][col]= 0;
+				Flag = 1;
+				break;
+			}
+		}
+	}
+	if (Flag == 1){
+
+	}
+	else
+	    cout << "Seat Reserved Already, Please Choose Another" 
+		<< endl;
+
+}
+void ScreenDisplay(){
+	char Ans;
+	do {
+		cout << "Available Seats" << endl;
+		for (row = 0; row < 5; row++){
+			for (col = 0; col < 7; col++){
+				cout << SeatDirectory[row][col] << '\t';
+			}
+			cout << endl;
+			cout << endl;
+		}
+		Reservation();
+		cout << "Select Another Seat Again? Y/N?";
+		cin >> Ans;
+		cout << endl;
+	} while (Ans == 'Y' || Ans == 'y');
+	if (Ans == 'N' || Ans == 'n');
+	cout << "RESERVED SEATS SUMMARY" << endl;
+	for (row = 0; row < 5; row++){
+		for (col = 0; col < 7; col++){
+			cout << SeatDirectory[row][col] << '\t';
+		}
+		cout << endl;
+		cout << endl;
+	}
+	cout << "THANK YOU!";
+
+  }
+};
+int main(){
+	SeatReservation ob;
+	ob.ScreenDisplay();
+	cout << endl;
+
+system ("pause");
+    return EXIT_SUCCESS;
+}

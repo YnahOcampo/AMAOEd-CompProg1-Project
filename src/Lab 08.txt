@@ -1,0 +1,61 @@
+int main(){
+
+cout << "Enter two numbers:" << endl;
+
+int a = 0, b = 0; 
+cin >> a >> b; 
+
+cout <<"The quotient of " << a << " and " << b << " is " << a / b << endl;
+
+
+
+cout << "Enter two numbers:" << endl;
+
+int c = 0, d = 0; 
+cin >> c >> d; 
+
+cout <<"The quotient of " << c << " and " << d << " is " << c / d << endl;
+
+
+
+cout << "Enter two numbers:" << endl;
+
+int e = 0, f = 0; 
+cin >> e >> f; 
+
+cout <<"The quotient of " << e << " and " << f << " is " << e / f << endl;
+
+
+cout << endl;
+cout << endl;
+cout <<"Thank You!";
+
+
+ //laboratory 08
+ 
+#include <cstdlib>
+#include <iostream>
+#include "_pause.h"
+#include <string>
+//1.Write a program that can divide six non-zero integers 
+//(two integers per division) from the user and display the result to the user.
+//Create a function that will perform the division operation. Display only the non-decimal part of the quotient.
+using namespace std;
+int main(){
+
+int a = 200, b = 5; 
+cout <<"The quotient of " << a << " and " << b << " is " << a / b << endl;
+
+int c = 1000, d = 50; 
+cout <<"The quotient of " << c << " and " << d << " is " << c / d << endl;
+
+int e = 99, f = 3; 
+cout <<"The quotient of " << e << " and " << f << " is " << e / f << endl;
+
+cout << endl;
+cout << endl;
+cout <<"Thank You!";
+
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}

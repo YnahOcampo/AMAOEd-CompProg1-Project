@@ -1,0 +1,86 @@
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+#include "_pause.h"
+
+using namespace std;
+
+int main() {
+//Machine Problem 001: Enrollment Slip
+//Write a C++ program that will ask for the following input from the user:
+//Student Name:
+//Program/Course:
+
+
+cout << "Student Name: Ynah Ocampo" << endl;
+cout << "Program/Course: BSBA Major in MIS " << endl;
+
+
+
+//Let's Run the application!
+//It works! next...
+//Year Level: (should be integer type)
+
+int YearLevel = 3;
+
+if (YearLevel < 2) {
+    cout <<"Year Name: Freshman " << endl;
+}else if (YearLevel < 3) {
+    cout <<"Year Name:Sophomore " << endl;
+}else if (YearLevel < 4) {
+    cout << "Year Name:Junior " << endl;
+}else
+    cout <<"Year Name:Senior " << endl;
+
+//Since the integer is 2 we are expecting the Sophomore outcome...bcoz 3 is greater than 2.
+//Let's run the application....
+//Number of Units Enrolled: (should be double or float data type)
+//float a is no. of units
+//float b is rate per units
+
+//Tuition fee = no. of units enrolled X rate per unit
+//Down payment = 30% of the tuition fee
+//Balance = tuition fee – down payment
+
+
+float a = 18;
+float b = 2300;
+
+ cout << "Number of Units: " << a << endl;
+ cout <<"Tuition Fee: " << a*b << endl;
+ cout <<"DownPayment: " << a*b*0.3 << endl;
+ cout <<"Balance: " << a*b-a*b*0.3 << endl;
+ //Let's run....
+ //That's all for today... this is machine problem 001
+ //Till next time
+
+
+
+   
+
+ 
+
+ 
+    
+ 
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+system ("pause");
+    return 0;
+}

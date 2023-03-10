@@ -1,0 +1,228 @@
+//1.Write a class that extends the Legged Mammal class from the previous laboratory exercise.  
+//The class will represent a Dog.  Consider the breed, size and is registered.  
+//Initialize all properties of the parent class in the new constructor.  
+//This time, promote the use of accessors and mutators for the new properties.  
+//Instantiate a Dog object in the main function and be able to set the values
+//of the properties of the Dog object using the mutators.  Display all the properties of 
+//the Dog object using the accessors.
+
+#include <cstdlib>
+#include <iostream>
+#include "dog.h"
+
+using namespace std;
+
+int main()
+{
+  Dog pet("Dog", "Wavy", 4, true);
+  pet.setBreed("Chihuahua");
+  pet.setSize("Small");
+  pet.setIsRegister(false);
+  cout << "[Dog Details] \n" << pet.getMammal();
+  cout << "Breed: " << pet.getBreed() << endl;
+  cout << "Size: " << pet.getSize() << endl;
+  cout << "Is Registered: " << pet.getIsRegister() << endl;
+  cout << endl;
+  system ("pause");
+  return EXIT_SUCCESS;
+}
+-----------------------------------------------------------------
+dog.h
+
+#include <string>
+#include <sstream>
+#include "mammal.h"
+
+using namespace std;
+
+class Dog : public Mammal {
+  private:
+    string _breed, _size;
+    bool _isRegister;
+
+  public:
+    Dog(string name, string fur, short legs, bool hasTail)
+      :Mammal(name,fur,legs, hasTail) {
+    }
+
+    void setBreed(string breed) {
+      this->_breed = breed;
+    }
+
+    string getBreed() {
+      return _breed;
+    }
+
+    void setSize(string size) {
+      this->_size = size;
+    }
+
+    string getSize() {
+      return _size;
+    }
+
+    void setIsRegister(bool isregister) {
+      this->_isRegister = isregister;
+    }
+
+    bool getIsRegister() {
+      return _isRegister;
+    }
+
+    string getInformation() {
+     ostringstream s;
+     s << this->getMammal();
+     s << "Breed: " << getBreed() << endl;
+     s << "Size: " << getSize() << endl;
+     s << "Is Registered: " << getIsRegister() << endl;
+      return s.str();
+     }
+};
+----------------------------------------------------------------------------------------------------
+mammal.h
+
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+class Mammal {
+  private:
+    string sName, sFur;
+    short nLegs;
+    bool bTail;
+
+  public:
+    Mammal(string name, string fur, short legs, bool hasTail) {
+      sName = name;
+      sFur = fur;
+      nLegs = legs;
+      bTail = hasTail;
+    }
+
+    string getMammal() {
+      ostringstream s;
+      s << "Name: " << sName << endl;
+      s << "Fur: " << sFur << endl;
+      s << "Legs: " << nLegs << endl;
+      s << "Has Tail: " << bTail << endl;
+      return s.str();
+    }
+};
+************************************************************************
+
+//2.Write a class that extends the Person class from the previous laboratory exercise.  
+//The class will represent a Student. Consider the academic program, year in college and enrolled university. 
+//Initialize all the properties of the parent class in the new constructor.  
+//This time, promote the use of accessors and mutators for the new properties.  
+//Instantiate a Student object in the main function and be able to set the values of the properties of 
+//the Student object using the mutators.  Display all the properties of the Student object using the accessors.
+
+#include <cstdlib>
+#include <iostream>
+#include "student.h"
+
+using namespace std;
+
+int main()
+{
+  Student student("Filipina Ocampo", "Abu Dhabi, UAE", "Female", 35, "Unemployed");
+  student.setProgram("BSBA MIS");
+  student.setYearsInCollege(2);
+  student.setUniversity("AMAOED");
+  cout << "[Student Details] \n" << student.getInformation();
+  cout << "Program: " << student.getProgram() << endl;
+  cout << "Years in College: " << student.getYearsInCollege() << endl;
+  cout << "University: " << student.getUniversity() << endl;
+
+  cout << endl;
+  system ("pause");
+  return EXIT_SUCCESS;
+}
+------------------------------------------------------------------------------------------------
+student.h
+
+#include <string>
+#include <sstream>
+#include "person.h"
+
+using namespace std;
+
+class Student : public Person{
+
+  private:
+    string _program, _university;
+    short _years;
+  public:
+    Student(string name, string address, string gender, short age, string occupation)
+        :Person(name, address, gender, age, occupation) {
+
+    }
+
+    void setProgram(string program) {
+      this->_program = program;
+    }
+
+    string getProgram() {
+      return _program;
+    }
+
+    void setUniversity(string university) {
+      this->_university = university;
+    }
+
+    string getUniversity() {
+      return _university;
+    }
+
+    void setYearsInCollege(short years) {
+      this->_years = years;
+    }
+
+    short getYearsInCollege() {
+      return _years;
+    }
+
+    string getInformation(){
+    ostringstream s;
+    s << this->Person::getInformation();
+    s << "Program: " << getProgram() << endl;
+    s << "Years in College: " << getYearsInCollege() << endl;
+    s << "University: " << getUniversity() << endl;
+    return s.str();
+     }
+};
+------------------------------------------------------------------------------------------------------
+person.h
+
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+class Person {
+
+  public:
+    string Name, Address, Gender, Occupation;
+    short Age;
+    Person(string name, string address, string gender, short age, string occupation);
+    string getInformation();
+};
+
+Person::Person(string name, string address, string gender, short age, string occupation){
+  Name = name;
+  Address = address;
+  Gender = gender;
+  Age = age;
+  Occupation = occupation;
+}
+
+string Person::getInformation(){
+  ostringstream s;
+  s << "Name: " << Name << endl;
+  s << "Address: " << Address << endl;
+  s << "Gender: " << Gender << endl;
+  s << "Age: " << Age << endl;
+  s << "Occupation: " << Occupation << endl;
+  return s.str();
+}

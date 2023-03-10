@@ -1,0 +1,161 @@
+//1.	Write a class that will represent a LeggedMammal. 
+//Consider the number of legs, kind of fur, presence of tail.
+//main.cpp
+#include <cstdlib>
+#include <iostream>
+#include "mammal.h"
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+int main()
+{
+  Mammal animal("cat", "fluffy", 4, true);
+
+  cout << "[Mammal Details] \n" << animal.getMammal() << endl;
+
+  cout << endl;
+  system ("pause");
+  return EXIT_SUCCESS;
+}
+mammal.h
+
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+class Mammal {
+  private:
+    string sName, sFur;
+    short nLegs;
+    bool bTail;
+
+  public:
+    Mammal(string name, string fur, short legs, bool hasTail) {
+      sName = name;
+      sFur = fur;
+      nLegs = legs;
+      bTail = hasTail;
+    }
+
+    string getMammal() {
+      ostringstream s;
+      s << "Name: " << sName << endl;
+      s << "Fur: " << sFur << endl;
+      s << "Legs: " << nLegs << endl;
+      s << "Has Tail: " << bTail << endl;
+      return s.str();
+    }
+};
+
+//2.Write a class that will represent a Person. 
+//Consider the name, address, gender, age and occupation.
+
+main.cpp
+
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <sstream>
+#include "person.h"
+
+using namespace std;
+
+int main()
+{
+  Person pip("Filipina Ocampo", "Abu Dhabi, UAE", "Female", 35, "Unemployed");
+
+  cout << "[Personal Details] \n" << pip.getInformation() << endl;
+
+  cout << endl;
+  system ("pause");
+  return EXIT_SUCCESS;
+}
+
+person.h
+
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+class Person {
+
+  public:
+    string Name, Address, Gender, Occupation;
+    short Age;
+    Person(string name, string address, string gender, short age, string occupation);
+    string getInformation();
+};
+
+Person::Person(string name, string address, string gender, short age, string occupation){
+  Name = name;
+  Address = address;
+  Gender = gender;
+  Age = age;
+  Occupation = occupation;
+}
+
+string Person::getInformation(){
+  ostringstream s;
+  s << "Name: " << Name << endl;
+  s << "Address: " << Address << endl;
+  s << "Gender: " << Gender << endl;
+  s << "Age: " << Age << endl;
+  s << "Occupation: " << Occupation << endl;
+  return s.str();
+}
+
+main.cpp
+
+//3.Write a class that will represent Polygon. 
+//Consider the name, number of sides and color.
+
+#include <cstdlib>
+#include <iostream>
+#include "polygon.h"
+
+using namespace std;
+
+int main()
+{
+  Polygon shape("Triangle", "Pink", 3);
+
+  cout << "[Polygon Details] \n" << shape.getInformation() << endl;
+
+  cout << endl;
+  system ("pause");
+  return EXIT_SUCCESS;
+}
+
+polygon.h
+
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+class Polygon {
+
+  public:
+    string Name, Color;
+    short Sides;
+    Polygon(string name, string color, short sides);
+    string getInformation();
+};
+
+Polygon::Polygon(string name, string color, short sides){
+  Name = name;
+  Color = color;
+  Sides = sides;
+}
+
+string Polygon::getInformation(){
+  ostringstream s;
+  s << "Name: " << Name << endl;
+  s << "Color: " << Color << endl;
+  s << "Sides: " << Sides << endl;
+  return s.str();
+}

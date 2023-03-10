@@ -1,0 +1,68 @@
+Laboratory 12
+
+//1.Write a program that will change the value of an integer variable with initial value of
+// 654,321 to 27,946 without directly assigning a value to the variable. 
+//You cannot create any pointersor references in the main function.
+
+#include <iostream>
+
+using namespace std;
+
+void setValue(int& b) {
+  b = 27946;
+}
+
+int main() {
+  int a = 654321;
+
+  cout << "The value of a is: " << a << endl;
+
+  setValue(a);
+  cout << "The value of a after setValue is: " << a << endl;
+
+system("pause");
+  return EXIT_SUCCESS;
+}
+
+//2.Write a program that will display the address of a float variable and another variable that shares 
+//the same address and value as the first variable. Do not initialize the first variable.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  float a;
+  float& b = a;
+  cout << "The value of a is: " << a << endl;
+  cout << "The address of a is: " << &a << endl;
+  cout << endl;
+
+  cout << "The value of b is: " << b << endl;
+  cout << "The address of b is: " << &b << endl;
+  
+  system("pause");
+  return EXIT_SUCCESS;
+}
+
+//3.Write a program that will display the words “This is it!” from a variablewithout 
+//assigning any characters to the variable. 
+//You cannot use cout << “This is it!” << endl; or any variants of it.
+
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+void setRef(string& b) {
+  b = "This is it!";
+}
+
+int main() {
+  string a;
+
+  setRef(a);
+  printf("%s\n",a.c_str());
+  system("pause");
+  return EXIT_SUCCESS;
+}

@@ -1,0 +1,206 @@
+/* ****************************************************************
+ * @author: <your name here>
+ * @app name: <your application name here>
+ * @app desc: <describe the purpose of your application here>
+ * @history:
+ *  - <yyyy/mm/dd> | <name>
+ *      -- <description>
+ *      -- <description>
+ *      -- <description>
+ *  - <yyyy/mm/dd> | <name>
+ *      -- <description>
+ *      -- <description>
+ *      -- <description>
+ * ****************************************************************/
+
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include "_pause.h"
+#include <string>
+
+using namespace std;
+
+//////////////////////////////////////////////////////////////////
+//                               NOTE
+// This is your program entry point. Your main logic is placed
+// inside this function. You may add your functions before this
+// "main()", or after this "main()" provided you added reference
+// before this "main()" function.
+//////////////////////////////////////////////////////////////////
+
+int main() {
+    // ************************** TO DO **************************
+    // Place your code logic after this comment line
+    // ***********************************************************
+
+    //answer to problem 1 Laboratory 004
+    string a = "***Section: User's Section***";
+    cout << "String = " << a << endl;
+    //Done
+	
+	//answer to problem 2 Laboratory 004
+    string b = "Daily Budget";
+    string c = "300pesos per day in 30 days";
+    string d = "Total Budget in a Month 9000 pesos";
+    cout << "String = " << b << endl;
+    cout << "String = " << c << endl;
+    cout << "String = " << d << endl;
+    //Done!
+
+    //answer to problem 3 Laboratory 004
+    string f = "Hi, I am Filipina Ocampo";
+    string g = "I live in Abu Dhabi UAE";
+    string h = "Password 123456";
+    cout << "String = " << f << endl;
+    cout << "String = " << g << endl;
+    cout << "String = " << h << endl;
+    //Done!
+
+    //Welcome to Week006!
+//For this week, we will explore the conditionals in C++.
+//To start, let us recreate or template...
+
+
+
+    //let us first define our age variable
+    int age = 18;
+
+    //let us create a series of if statements to display 
+    //a message depending on our age.
+    if (age < 19) { 
+        cout << "Minor!" << endl;
+    } else if (age < 30) {
+        cout << "Young Adult!" << endl;
+    } else if (age < 50) {
+        cout << "Adult!" << endl;
+    } else {
+        cout << "Senior!" << endl;
+    }
+    //If we run our application, we expect the display to be a YOUNG ADULT
+    //since our age is less than 30 but greater than 19..
+    //If we change our age to 18, we will get MINOR...
+    //Done!
+
+    //Now, let us explore the SWITCH statement...
+    int month = 2;
+    switch (month) {
+        case 1:
+            cout << "January" << endl;
+            break;
+        case 2:
+            cout << "February" << endl;
+            break;
+        case 3:
+            cout << "March" << endl;
+            break;
+        case 4:
+            cout << "April" << endl;
+            break;
+        case 5:
+            cout << "May" << endl;
+            break;
+        default:
+            cout << "Month is not recognized..." << endl;
+
+    
+    }
+
+    //Answers 1.
+    int number = 0;
+
+    //let us create a series of if statements to display 
+    //a message depending on our number.
+
+    if (number < 0) { 
+        cout << "Hello World!" << endl;
+    } else if (number < 1) {
+        cout << "I am Groot!" << endl;
+    } else if (number < 2) {
+        cout << "To the Top!" << endl;
+    } else if (number < 3) {
+        cout << "Where is the horizon" << endl;
+    } else if (number < 4) {
+        cout << "I do not know!" << endl;
+    } else 
+        cout << "Yeah, I will!" << endl; 
+    }
+
+
+lab 05
+   //Now, let us explore the SWITCH statement...
+    int display = 2;
+    switch (display) {
+        case 1:
+            cout << "Hello World" << endl;
+            break;
+        case 2:
+            cout << "I am good" << endl;
+            break;
+        case 3:
+            cout << "To the Top" << endl;
+            break;
+        case 4:
+            cout << "Where is the horizon" << endl;
+            break;
+        case 5:
+            cout << "I do not know" << endl;
+            break;
+        default:
+            cout << "Yeah, I wil..." << endl;
+
+    
+    // Machine Problem 1
+	
+	#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+#include "_pause.h"
+
+using namespace std;
+
+
+int main() {
+   cout << "Student Name: Ynah Ocampo" << endl;
+   cout << "Program/Course: BSBA major in MIS " << endl;
+   
+
+   int YearLevel = 2;
+
+   if (YearLevel < 2) { 
+        cout << "Year Name: Freshman" << endl;
+    } else if (YearLevel < 3) {
+        cout << "Year Name: Sophomore" << endl;
+    } else if (YearLevel < 4) {
+        cout << "Year Name: Junior" << endl;
+    } else {
+        cout << "Year Name: Senior" << endl;
+        
+    }
+    
+    float a = 12;
+    float b = 1800;
+    
+        cout << "Number of Units: " << a << endl;
+        cout << "Tuition Fee: " << a*b << endl;
+        cout << "Downpayment: " << a*b*0.3 << endl;
+        cout << "Balance: " << a*b-a*b*0.3 << endl;
+        
+
+
+    
+        
+
+    
+    
+
+   
+
+    
+
+
+
+    system ("pause");
+    return 0;
+}

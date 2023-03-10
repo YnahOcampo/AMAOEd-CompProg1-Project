@@ -1,0 +1,65 @@
+int main() {
+    int n;
+    cout <<"Enter the number of row: ";
+    cin >> n;
+    cout << endl;
+
+    for (int i = 0; i < n; i++) {
+        for (int t = 0; t < n - i; t++) {
+            cout << " ";
+        }
+        for (int t = 0; t < (i * 2) + 1; t++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+	//Question #1 - 1.	Write a program using WHILE statement 
+//that displays a right triangle using asterisks 
+//where the height is at the left corner of the application. 
+//The height will depend on the user input.
+
+int i =0, t;
+while (i < 20) {
+    t = 0;
+    while (t <= i) {
+        cout << "*";
+        t = t + 1;
+    }
+    cout << endl;
+    i = i + 1;
+}
+int main() {
+//Question #3 -	Write a program using DO WHILE statement 
+//that displays an inverted equilateral triangle using asterisks.
+// No asterisk should be adjacent to one another. 
+//The height will depend on the user input.
+
+	int n;
+
+	cout << "Enter a number: ";
+	cin >> n;
+
+	int x, s; 
+	int y = 0;
+
+	do {
+		x = n - y;
+	    s = 0;
+		if (y != 0) {
+			do {
+				cout << " ";
+				++s;
+			} while (s < y);
+		}
+
+		if (x != 0) {
+			do {
+				cout << "*" << " ";
+				x--;
+			} while (x > 0);
+		}
+		cout << endl;
+		y++;
+	} while (y <= n);
+
+	std::cin.get();

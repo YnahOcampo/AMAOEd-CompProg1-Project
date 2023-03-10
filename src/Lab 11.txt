@@ -1,0 +1,62 @@
+//Laboratory Exercise 11
+
+//1.Write a program that will display the value and logical address of an integer variable 
+//with an initial value of 900.
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+  int a = 900;
+  cout << "The value of a is: " << a << endl;
+  cout << "The logical address of a is: " << &a << endl;
+  system("pause");
+  return EXIT_SUCCESS;
+}
+
+
+//2.Write a program that will display the value and logical address of an uninitialized 
+//character array with size ten (10) and a pointer pointing to the array. 
+//(Hint: you may need to perform some casting.)
+
+#include <iostream>
+#include <cstdlib>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+  char a[10];
+  char * p;
+  p = (char*) &a;
+  cout << "The value of a is: " << a << endl;
+  cout << "The logical address of a is: " << &a << endl;
+  cout << "The value of pointer of a is: " << p << endl;
+  system("pause");
+  return EXIT_SUCCESS;
+}
+
+
+//3.Write a program that will display the value and logical address of an uninitialized float array 
+//with size twenty (20) and a reference pointing to the array.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+  float a[20];
+  float (&r)[20] = a;
+  cout << "The value of a is: " << a << endl;
+  cout << "The logical address of a is: " << &a << endl;
+  cout << "The value of reference  is: " << r << endl;
+ 
+
+  system("pause");
+  return EXIT_SUCCESS;
+}
