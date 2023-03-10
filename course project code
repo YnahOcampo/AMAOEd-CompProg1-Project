@@ -1,0 +1,81 @@
+//Course Project
+
+#include <cstdio>
+#include <iostream>
+#include <sstream>
+
+
+
+using namespace std;
+
+int main()
+{
+    char Name[50]; //To store name
+    int Age; // To store age--> condition age > = 18
+    int NumberofGuests; //To store number of Guests
+    float NumberofDays; //To store number of Days
+
+    /*
+    --Taking input from the user
+    --If age is <18, prompt error message and exit from the program
+    */
+
+   cout <<"\nEnter Details\n";
+   cout <<"Customer Name: ";
+   cin >> Name;
+   cout <<"Age: ";
+   cin >> Age;
+   cout <<"Number of Guests: ";
+   cin >> NumberofGuests;
+   cout <<"Number of Days: ";
+   cin >> NumberofDays;
+
+   if (Age < 18)
+   {
+    cout <<"\nAge should be above 18";
+    return 0;
+   }
+
+   //Calculating Daily Rate on the basis of NumberofGuests
+   int DailyRate;
+   if (NumberofGuests == 1)
+      DailyRate = 1000;
+      else if (NumberofGuests == 2)
+          DailyRate = 1800;
+      else if (NumberofGuests == 3)
+          DailyRate = 2700;
+      else if (NumberofGuests == 4)
+          DailyRate =3600;
+      else if (NumberofGuests >=5)
+          DailyRate = 4500;
+
+      //Calculating Total Payment
+      float TotalPayment = DailyRate * NumberofDays;
+      float DownPayment = (40 * TotalPayment) /100;
+      float Balance = TotalPayment - DownPayment;
+
+      //Displaying the Details
+
+      cout <<"\n\n-------------------------------";
+      cout <<"\n\t\tHotel Reservation Slip";
+      cout << endl;
+      cout <<"\nCustomer Name" << "\t\t:" <<Name;
+      cout <<"\nAge" << "\t\t\t:" <<Age;
+      cout <<"\nNumber of Guest  " << "\t: " <<NumberofGuests;
+      cout <<"\nNumber of Days " << "\t\t: " <<NumberofDays;
+      cout <<"\nTotal Payment  " << "\t\t: " <<TotalPayment;
+      cout <<"\nDown Payment  " << "\t\t: " <<DownPayment;
+      cout <<"\nBalance" << "\t\t\t: " <<Balance;
+
+      cout << endl;
+      cout << endl;
+      
+      cout << "Thank You!" << endl;
+      
+      
+      system ("pause");
+      return EXIT_SUCCESS; 
+
+
+
+}
